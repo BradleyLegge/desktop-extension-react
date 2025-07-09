@@ -38,6 +38,8 @@ body {
   background-size: cover;
 }
 
+*:focus{}
+
 /* Components */
 
 /* Header Component */
@@ -81,6 +83,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  gap: 40px;
 }
 
 .extension-info {
@@ -126,7 +129,7 @@ body {
 }
 
 .toggled:focus,
-.toggle-btn:focus {
+.toggle-btn:focus, .remove-btn:focus{
   border: 2px solid var(--neutral-0);
   outline: 3px solid var(--red-500);
 }
@@ -137,4 +140,16 @@ body {
 }
 
 .remove-btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-300);
+  color: var(--neutral-900);
+  font-weight: var(--font-weight-500);
+}
+
+.remove-btn:hover{
+  background: var(--red-700);
+  color: var(--neutral-0)
 }
