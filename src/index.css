@@ -5,7 +5,7 @@
   font-family: "Noto Sans", sans-serif;
 }
 
-:root{
+:root {
   /* Colors */
 
   --neutral-900: hsl(227, 75%, 14%);
@@ -20,8 +20,8 @@
   --red-400: hsl(3, 86%, 64%);
   --red-500: hsl(3, 71%, 56%);
   --red-700: hsl(3, 77%, 44%);
-  
-  --gradiant-light: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+
+  --gradiant-light: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
   --gradiant-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
 
   /* Font */
@@ -31,7 +31,7 @@
   --font-weight-700: 700;
 }
 
-body{
+body {
   min-height: 100vh;
   background: var(--gradiant-light);
   background-repeat: no-repeat;
@@ -42,11 +42,11 @@ body{
 
 /* Header Component */
 
-.header-container{
+.header-container {
   margin: 50px auto;
   width: 85%;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 12px;
   background: var(--neutral-0);
   display: flex;
   justify-content: space-between;
@@ -54,25 +54,28 @@ body{
   box-shadow: 2px 2px 5px 2px var(--neutral-200);
 }
 
-.light-mode-btn{
+.light-mode-btn {
   cursor: pointer;
   padding: 12px;
-  border-radius: 15px;
-  border: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+  border: 2px solid var(--neutral-0);
 }
 
-.light-mode-btn:focus{
-  outline: 2px solid var(--red-400);
+.light-mode-btn:focus {
+  border: 2px solid var(--neutral-0);
+  outline: 3px solid var(--red-500);
+  box-sizing: border-box;
 }
 
-.light-mode-btn:hover{
+.light-mode-btn:hover {
   cursor: pointer;
   background: var(--neutral-300);
 }
 
 /* Extension Component */
 
-.extension-container{
+.extension-container {
   background-color: var(--neutral-0);
   border-radius: 15px;
   padding: 20px;
@@ -80,12 +83,58 @@ body{
   flex-direction: column;
 }
 
-.extension-info{
+.extension-info {
   display: flex;
   gap: 20px;
 }
 
-.extension-btns{
+.extension-btns {
   display: flex;
   justify-content: space-between;
+}
+
+.toggle-btn {
+  width: 50px;
+  height: 28px;
+  border: none;
+  background-color: var(--neutral-300);
+  border-radius: 100px;
+  position: relative;
+}
+
+.toggle-btn:hover {
+  cursor: pointer;
+}
+
+.slide {
+  width: 20px;
+  height: 20px;
+  background: var(--neutral-0);
+  border-radius: 100px;
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toggled {
+  background: var(--red-700);
+}
+
+.toggled:hover {
+  background: var(--red-500);
+}
+
+.toggled:focus,
+.toggle-btn:focus {
+  border: 2px solid var(--neutral-0);
+  outline: 3px solid var(--red-500);
+}
+
+.toggled .slide {
+  position: absolute;
+  left: calc(50px - 26px);
+}
+
+.remove-btn {
 }

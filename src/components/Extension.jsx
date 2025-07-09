@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import devLensIcon from "../imgs/logo-devlens.svg";
 
 const Extension = () => {
+  const [toggled, setToggled] = useState(false);
+
   return (
     <div className="extension-container">
       <div className="extension-info">
@@ -13,7 +15,12 @@ const Extension = () => {
       </div>
       <div className="extension-btns">
         <button className="remove-btn">Remove</button>
-        <button className="toggle-btn">Toggle</button>
+        <button
+          onClick={() => setToggled(!toggled)}
+          className={`toggle-btn ${toggled ? "toggled" : ""}`}
+        >
+          <div className="slide"></div>
+        </button>
       </div>
     </div>
   );
