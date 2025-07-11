@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/header";
-import Extension from "./components/Extension";
 import Filter from "./components/Filter";
+import Extensions from "./components/Extensions";
 
 const App = () => {
   const [toggled, setToggled] = useState(false);
@@ -10,7 +10,7 @@ const App = () => {
     <div className="app-container">
       <Header />
       <Filter />
-      <Extension />
+      <Extensions />
     </div>
   );
 };

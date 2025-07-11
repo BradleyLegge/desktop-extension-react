@@ -38,7 +38,7 @@ body {
   background-size: cover;
 }
 
-.app-container{
+.app-container {
   margin: 50px auto;
   width: 85%;
 }
@@ -79,19 +79,19 @@ body {
 
 /* Filter Component */
 
-.filter-container{
+.filter-container {
   margin-bottom: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.button-list{
+.button-list {
   display: flex;
   gap: 20px;
 }
 
-.all-btn{
+.all-btn {
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 100px;
@@ -101,12 +101,13 @@ body {
   font-weight: var(--font-weight-500);
 }
 
-.all-btn:hover{
+.all-btn:hover {
   background: var(--red-400);
   border: 2px solid var(--red-400);
 }
 
-.active-btn, .inactive-btn{
+.active-btn,
+.inactive-btn {
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 100px;
@@ -116,7 +117,8 @@ body {
   font-weight: var(--font-weight-500);
 }
 
-.active-btn:focus, .inactive-btn:focus{
+.active-btn:focus,
+.inactive-btn:focus {
   border: 2px solid var(--neutral-300);
   outline: 3px solid var(--red-500);
 }
@@ -177,7 +179,7 @@ body {
 
 .toggled:focus,
 .toggle-btn:focus,
-.all-btn:focus{
+.all-btn:focus {
   border: 2px solid var(--neutral-0);
   outline: 3px solid var(--red-500);
 }
@@ -197,14 +199,22 @@ body {
   font-weight: var(--font-weight-500);
 }
 
-.remove-btn:hover{
+.remove-btn:hover {
   background: var(--red-700);
   color: var(--neutral-0);
   border: 2px solid var(--red-700);
 }
 
-.remove-btn:focus{
+.remove-btn:focus {
   background: var(--neutral-100);
   border: 2px solid var(--neutral-0);
   outline: 3px solid var(--red-500);
+}
+
+/* Extensions Component */
+
+.extensions-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
