@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/header";
 import Filter from "./components/Filter";
 import Extensions from "./components/Extensions";
+import Extension from "./components/Extension";
 
 const App = () => {
   const [toggled, setToggled] = useState(false);
@@ -10,7 +11,7 @@ const App = () => {
     <div className="app-container">
       <Header />
       <Filter />
-      <Extensions />
+      <Extension />
     </div>
   );
 };
